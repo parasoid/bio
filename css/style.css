@@ -74,6 +74,7 @@ nav{
 
 nav a {
     transition: .3s;
+    font-family: 'Steppe-Book';
 }
 
 nav a:hover {
@@ -86,6 +87,7 @@ nav a:hover {
 
 .logo a {
     transition: .3s;
+    font-family: 'Steppe-Book';
 }
 
 .logo a:hover {
@@ -142,12 +144,14 @@ main    {
     text-align: center;
     margin-bottom: 30px;
     font-size: 28px;
+    font-family: 'Steppe-Book';
 }
 
 .card-description {
     text-align: center;
     font-size: 15px;
     margin-bottom: 20px;
+    font-family: 'Steppe-Book';
 }
 
 .card-link  {
