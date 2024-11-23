@@ -1,8 +1,13 @@
+@font-face {
+    font-family: 'Steppe-Book';
+    src: url(../fonts/Steppe-Book.ttf);
+}
+
 body    {
     width: 100%;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Microsoft PhagsPa';
+    font-family: 'Steppe-Book';
     font-weight: 500;
     color: rgb(172, 189, 204);
 }
