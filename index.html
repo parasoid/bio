@@ -5,40 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>parasoid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Zen+Dots&display=swap" rel="stylesheet">
+    <title>crusader</title>
 </head>
 <body>
-    <div id="background">
-        <img src="images/background.jpg" class="stretch" alt="" />
+    <div id="loader-wrapper">
+        <div class="loader"></div>
     </div>
-    <div class="header">
-        <div class="head-container">
-            <div class="logo">
-                <a href="#">parasoid</a>
-            </div>
-            <nav>
-                <a href=""></a>
-            </nav>
+    <div id="content">
+        <div id="background">
+            <img src="images/background.jpg" class="stretch" alt="" />
         </div>
-    </div> <!-- конец шапки -->
-    <div class="container">
-        <main>
-            <div class="card">
-                <div class="card-wrapper">
-                    <div class="card-box">
-                        <div class="card-image"><img src="images/god.jpg" alt=""></div>
-                        <div class="card-info">
-                            <div class="card-title">parasoid</div>
-                            <div class="card-description">I'm a novaice front-end developer</div>
-                        </div>
-                        <div class="card-link">
-                            <a href="https://t.me/social_attacker" class="telegram">Telegram</a>
-                            <a href="https://github.com/parasoid" class="github">GitHub</a>
+
+        <div class="container">
+            <main>
+                <div class="card">
+                    <div class="card-wrapper">
+                        <div class="card-box">
+                            <div class="card-image"><img src="images/god.jpg" alt=""></div>
+                            <div class="card-info">
+                                <div class="card-title">crusader</div>
+                                <div class="card-description">I'm a novice front-end developer</div>
+                            </div>
+                            <div class="card-link">
+                            <a href="https://t.me/social_attacker" class="button button-telegram" target="_blank" rel="noopener noreferrer">
+                                <span class="button-icon">
+                                    <img src="images/telegram_logo_icon_147228.svg" alt="">
+                                </span> Telegram
+                            </a>
+                            <a href="https://github.com/parasoid" class="button button-github" target="_blank" rel="noopener noreferrer">
+                                <span class="button-icon">
+                                    <img src="images/github-logo_icon-icons.com_73546.svg" alt="">
+                                </span> GitHub
+                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </main> <!-- конец мейна -->
+            </main>
+        </div>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
