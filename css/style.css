@@ -1,11 +1,15 @@
 body    {
     width: 100%;
+    height: 100vh;
     margin: 0;
     box-sizing: border-box;
     font-family: "Zen Dots", serif;
     font-weight: 400;
     font-style: normal;
     color: rgb(172, 189, 204);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1,
@@ -26,7 +30,7 @@ a   {
 
 .container  {
     margin: auto auto;
-    width: 90%;
+    width: 100%;
 }
 
 
@@ -54,6 +58,7 @@ main    {
     height: 600px;
     margin: 0 auto;
     padding: 20px;
+
 }
 
 .card-wrapper   {
@@ -78,7 +83,7 @@ main    {
 }
 
 .card-image {
-    width: 100%;
+    width: 90%;
     height: 250px;
     display: flex;
     justify-content: center;
@@ -255,7 +260,7 @@ main    {
 
 @media (max-width: 768px)   {
     .card  {
-        width: 90%;
+        width: 100%;
     }
 
     .card-link  {
@@ -265,7 +270,7 @@ main    {
 
 @media (min-height: 700px)   {
     .container  {
-        margin-top: 14vh;
+        /* margin-top: 10vh; */
     }
 
     .card-wrapper   {
