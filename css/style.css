@@ -1,279 +1,238 @@
-body    {
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Zen Dots", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: rgb(172, 189, 204);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Zen Dots", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(172, 189, 204);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    margin: 0px;
-    color: rgb(172, 189, 204); 
-}
-
-a   {
-    text-decoration: none;
-    color: rgb(172, 189, 204);
-}
-
-.container  {
-    margin: auto auto;
-    width: 100%;
-}
-
 
 #background {
-    width: 100%; 
-    height: 100%; 
-    position: fixed; 
-    left: 0px; 
-    top: 0px; 
-    z-index: -1; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
-.stretch {
-    width:100%;
-    height:100%;
+#background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-main    {
-    background-color:  transparent;
-    width: 100%;
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.card   {
-    width: 510px;
-    height: 600px;
-    margin: 0 auto;
-    padding: 20px;
-
+.card {
+  width: 100%;
+  max-width: 510px;
+  margin: 0 auto;
+  background-color: transparent;
+  border-radius: 50px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 15px rgba(34, 60, 80, 0.16);
+  border: 0.2px solid rgba(127, 164, 233, 0.233);
+  overflow: hidden;
 }
 
-.card-wrapper   {
-    background-color:  transparent;
-    width: 100%;
-    height: 100%;
-    border-radius: 50px;
-    backdrop-filter: blur(20px);
-    -webkit-box-shadow: 13px 14px 15px 17px rgba(34, 60, 80, 0.16);
-    -moz-box-shadow: 13px 14px 15px 17px rgba(34, 60, 80, 0.16);
-    box-shadow: 13px 14px 15px 17px rgba(34, 60, 80, 0.16);
-    border: .2px solid rgba(127, 164, 233, 0.233);
+.card-wrapper {
+  padding: 20px;
 }
 
-.card-box   {
-    padding: 20px;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+.card-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .card-image {
-    width: 90%;
-    height: 250px;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  max-width: 250px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
 .card-image img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  text-align: center;
 }
 
 .card-title {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 28px;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
 .card-description {
-    text-align: center;
-    font-size: 15px;
-    margin-bottom: 20px;
+  font-size: 15px;
 }
 
 .card-link {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center; /* Центрирование кнопок */
-    width: 100%; /* Изменено для лучшего центрирования */
-    height: auto; /* Изменено с фиксированной высоты */
-    margin-bottom: 30px;
-    font-family: "Inter", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрирование кнопок по горизонтали */
+  gap: 15px;
+  width: 100%;
+  padding: 0 20px; /* Добавляем отступы по бокам */
+  box-sizing: border-box;
+}
+
+.button {
+  width: 100%;
+  max-width: 200px; /* Увеличиваем максимальную ширину кнопок */
+  padding: 12px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-family: "Inter", serif;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-telegram {
+  background-color: #0088cc;
+  color: rgb(210, 225, 238);
+  margin-bottom: 15px;
+}
+
+.button-github {
+  background-color: #f5f5f5;
+  color: rgba(35, 38, 41, 0.952);
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: 0.5s;
+}
+
+.button:hover::after {
+  left: 100%;
+}
+
+.button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.button-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.116);
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(172, 189, 204, 0.3);
+  border-top: 5px solid rgb(172, 189, 204);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#loader-wrapper.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#content {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .card {
+    border-radius: 30px;
+  }
+
+  .card-wrapper {
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 24px;
+  }
+
+  .card-description {
+    font-size: 14px;
+  }
+
   .button {
-    width: 170px; /* Фиксированная ширина для обеих кнопок */
-    padding: 12px 20px;
-    font-size: 16px;
-    text-decoration: none;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Центрирование содержимого кнопки */
-    transition: all 0.3s ease;
-    font-family: "Inter", serif;
-    font-weight: 500;
-    position: relative;
-    overflow: hidden;
+    font-size: 14px;
+    padding: 10px 15px;
+    max-width: 180px; /* Уменьшаем максимальную ширину кнопок для мобильных устройств */
   }
-  
-  .button-telegram {
-    background-color: #0088cc;
-    color: rgb(210, 225, 238); 
-    margin-bottom: 15px; /* Отступ между кнопками */
-  }
-  
-  .button-github {
-    background-color: #f5f5f5;
-    color: rgba(35, 38, 41, 0.952); 
-  }
-  
-  .button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .button:active {
-    transform: translateY(-1px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .button::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: 0.5s;
-  }
-  
-  .button:hover::after {
-    left: 100%;
-  }
-  
-  .button-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    width: 24px; /* Фиксированная ширина для иконки */
-    height: 24px; /* Фиксированная высота для иконки */
-  }
-  
-  .button-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  #loader-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.116); /* Немного затемним фон */
-    backdrop-filter: blur(20px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
-  }
-  
-  .loader {
-    width: 50px;
-    height: 50px;
-    border: 5px solid rgba(172, 189, 204, 0.3);
-    border-top: 5px solid rgb(172, 189, 204);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  #loader-wrapper.fade-out {
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  #content {
-    opacity: 1; /* Изменено с 0 на 1 */
-    transition: opacity 0.5s ease-in-out;
-  }
-
-#content.visible {
-    opacity: 1;
 }
 
-@media (max-width: 320px)   {
-    .container  {
-        width: 100%;
-    }
-
-    .card{
-        height: 550px;
-    }
-
-    .card-box   {
-        padding: 15px;
-    }
-
-    .card-wrapper   {
-        border-radius: 30px;
-    }
-
-    .card-title {
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 768px)   {
-    .card  {
-        width: 100%;
-    }
-
-    .card-link  {
-        margin-bottom: 30px;
-    }
-}
-
-@media (min-height: 700px)   {
-    .container  {
-        /* margin-top: 10vh; */
-    }
-
-    .card-wrapper   {
-        height: 100%;
-    }
+@media (max-height: 700px) {
+  .card {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
 }
